@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/bootstrap';
+
+
 *{
     padding: 0;
     margin: 0;
@@ -20,10 +23,49 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: 'Nunito', sans-serif;
     --font-family-monospace: 'Roboto Mono', monospace;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 
 .global-style {
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 992px) {
+    html {
+        font-size: 90%;
+    }
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 95%;
+    }
+}
+@media (max-width: 1400px) {
+    html {
+        font-size: 100%;
+    }
 }

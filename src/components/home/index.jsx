@@ -1,16 +1,37 @@
 import classnames from 'classnames/bind';
 import styles from './home.module.scss';
-import { Link } from 'react-router-dom';
+
+import Weather from '../weather';
+import Time from '../time';
+import Calendar from '../calendar';
+import Quotes from '../quotes';
 
 const  cx = classnames.bind(styles);
 
 
 const Home = () => {
+    const test = import.meta.env.VITE_SOME_KEY;
     return (
-        <div>
-            <h1 className={cx("main")}>My Home</h1>
-
-            <Link to="about">About Us</Link>
+        <div className={cx("content", "container-fluid")}>
+            <h1 className={cx("title")}>Today is perfect</h1>
+            <div className={cx("row px-2")}>
+                <div className={cx("col-12 col-sm-6 col-lg-4")}>
+                    <div className={cx("item")}>
+                        <Weather />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-6 col-lg-4")}>
+                    <div className={cx("item")}>
+                        <Time />
+                        <Quotes />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-12 col-lg-4")}>
+                    <div className={cx("item")}>
+                        <Calendar />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
