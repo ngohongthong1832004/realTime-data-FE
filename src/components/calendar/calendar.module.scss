@@ -1,5 +1,24 @@
-.title{
+.title-wrapper{
     font-size: 1.5rem;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        font-size: 1.3rem;
+        padding:0 3rem ;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+        }
+    }
+    p {
+        font-size: 1rem;
+        padding:0 1rem ;
+        margin: 0;
+    }
 }
 .custom-table {
     background-color: transparent !important;
@@ -9,4 +28,10 @@
     td, th, tr {
         padding :0.5rem 0.3rem !important;
     }
+}
+
+.active {
+    background-color: aqua !important;
+    color: black !important;
+    font-weight: 600;
 }

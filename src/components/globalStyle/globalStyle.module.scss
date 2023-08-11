@@ -44,27 +44,27 @@
     margin: 0;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
     html {
-        font-size: 50%;
+        font-size: 80%;
     }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     html {
-        font-size: 55%;
+        font-size: 85%;
     }
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
     html {
         font-size: 90%;
     }
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
     html {
         font-size: 95%;
     }
 }
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
     html {
         font-size: 100%;
     }

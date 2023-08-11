@@ -1,0 +1,38 @@
+.info-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .info-top-wrapper {
+        align-items: left;
+        ul {
+            list-style: none;
+            padding: 0;
+            align-items: left;
+            h3 {
+                padding: 0;
+            }
+            li {
+                display: flex;
+            }
+        }
+    }
+}
+.title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #999;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+}
+table {
+    th {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #999;
+        padding: 0.5rem;
+    }
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
