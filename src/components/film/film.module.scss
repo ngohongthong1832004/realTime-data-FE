@@ -1,0 +1,58 @@
+.custom-btn {
+    width: 15rem;
+}
+.custom-dropdown {
+    width: 15rem;
+    height: 10rem;
+    overflow: auto;
+}
+
+
+.list-film {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // overflow: auto;
+    margin-top: 1rem;
+
+    .custom-row {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .film {
+        // margin: 0.5rem;
+        // width: 15rem;
+        // height: 10rem;
+        // object-fit: contain;
+        a {
+            text-decoration: none;
+        }
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            overflow: hidden;
+                
+        }
+        .film-info {
+            h3 {
+                font-size: 1rem;
+                color: white;
+                font-weight: 400;
+                overflow: hidden;
+                // white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                // width: 80%;
+                // height: 1rem;
+            }
+        }
+    }
+}

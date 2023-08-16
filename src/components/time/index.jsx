@@ -59,20 +59,20 @@ const Time = () => {
 
       // Draw the hour hand
       const hourAngle = (hour % 12) * (Math.PI / 6) + (minute * Math.PI) / 360;
-      drawHand(ctx, hourAngle, x * radius * 0.5, radius * 0.07);
+      drawHand(ctx, hourAngle, x * radius * 0.5, radius * 0.07, '#242424');
 
       // Draw the minute hand
       const minuteAngle = (minute * Math.PI) / 30 + (second * Math.PI) / 1800;
-      drawHand(ctx, minuteAngle, x * radius * 0.8, radius * 0.07);
+      drawHand(ctx, minuteAngle, x * radius * 0.8, radius * 0.07, '#242424');
 
       // Draw the second hand
       const secondAngle = (second * Math.PI) / 30;
-      drawHand(ctx, secondAngle, x * radius * 0.9, radius * 0.02);
+      drawHand(ctx, secondAngle, x * radius * 0.9, radius * 0.02, `hsl(${secondAngle * 180 / Math.PI}, 100%, 50%)`);
     }
 
-    function drawHand(ctx, pos, length, width) {
+    function drawHand(ctx, pos, length, width, color) {
       ctx.beginPath();
-
+      ctx.strokeStyle = color;
       ctx.lineWidth = width;
       ctx.lineCap = 'round';
       ctx.moveTo(x, 0);

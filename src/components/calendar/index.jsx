@@ -26,7 +26,7 @@ const Calendar = () => {
     year = date.getFullYear();
     active = date.getDate();
     
-    const daysInMonth = getDaysInMonth(month, year);
+    const daysInMonth = getDaysInMonth(month + 1, year);
     const firstDayInMonth = new Date(year, month, 1).getDay();
 
     function getMonthName(monthNumber) {
@@ -34,9 +34,11 @@ const Calendar = () => {
         return date.toLocaleString('en-US', { month: 'long' });
     }
 
+    // console.log(month, daysInMonth)
+
     const calendar = []
    
-    for(let i = 0; i < 35; i++){
+    for(let i = 1; i < 35; i++){
         if (i < firstDayInMonth || i > daysInMonth + firstDayInMonth - 1){
             calendar.push(null)
         }else{

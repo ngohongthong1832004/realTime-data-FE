@@ -1,0 +1,46 @@
+.title {
+    font-size: 1.3rem;
+    color: #888;
+    padding: 0.5rem;
+    border-bottom: 3px solid #888;
+}
+
+
+.music {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #888;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+    .index {
+        font-size: 1.3rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: aqua;
+        color: black;
+        margin-right: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 0.5rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .music-info {
+        flex: 1;
+        h3{
+            font-size: 1.3rem;
+        }
+        p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    }
+}

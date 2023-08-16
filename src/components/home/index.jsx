@@ -5,6 +5,9 @@ import Weather from '../weather';
 import Time from '../time';
 import Calendar from '../calendar';
 import Quotes from '../quotes';
+import Film from '../film';
+import Music from '../music';
+import Book from '../book';
 
 const  cx = classnames.bind(styles);
 
@@ -29,6 +32,19 @@ const Home = () => {
                 <div className={cx("col-12 col-sm-12 col-lg-4")}>
                     <div className={cx("item")}>
                         <Calendar />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-12 col-lg-8")}>
+                    <div className={cx("item")}>
+                        <Film />
+                    </div>
+                    <div className={cx("item")}>
+                        <Book />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-12 col-lg-4")}>
+                    <div className={cx("item")}>
+                        <Music />
                     </div>
                 </div>
             </div>

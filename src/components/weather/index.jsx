@@ -9,7 +9,7 @@ const  cx = classnames.bind(styles);
 const Weather = () => {
     const [weather, setWeather] = useState(null);
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/weather/')
+        fetch(import.meta.env.VITE_API_URL + 'weather/')
         .then(response => response.json())
         .then(data => setWeather(data));
     }, []);
