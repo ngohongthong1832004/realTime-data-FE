@@ -1,10 +1,13 @@
 .custom-btn {
-    width: 15rem;
+    min-width: 15rem;
 }
 .custom-dropdown {
     width: 15rem;
     height: 10rem;
     overflow: auto;
+    li {
+        cursor: pointer;
+    }
 }
 
 
@@ -54,5 +57,15 @@
                 // height: 1rem;
             }
         }
+    }
+}
+
+
+@media (max-width : 992px) {
+    .film:nth-child(4) {
+        margin:auto;
+    }
+    .film:nth-child(5) {
+        margin:auto;
     }
 }

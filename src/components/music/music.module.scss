@@ -5,6 +5,11 @@
     border-bottom: 3px solid #888;
 }
 
+.music-wrap{
+    max-height: 42rem;
+    overflow: auto;
+}
+
 
 .music {
     display: flex;
@@ -13,6 +18,8 @@
     border-bottom: 1px solid #888;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
+
+  
 
     .index {
         font-size: 1.3rem;
