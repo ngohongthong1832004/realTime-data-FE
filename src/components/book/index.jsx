@@ -39,23 +39,23 @@ const Book = () => {
                <div className={cx("row", "custom-row")}>
                   {
                      data && data?.data[genre]?.data?.map((item, index) =>{
-                        if (index == 2 ){
+                        // if (index == 2 ){
+                        //    return (
+                        //          <div className={cx("book","col-6 col-sm-4 col-lg-4")} key={index}>
+                        //                <div className={cx("book-img")}>
+                        //                   <img src={item.image} alt={item.name} />
+                        //                </div>
+                        //                <div className={cx("book-info")}>
+                        //                   <h3>{item.name}</h3>
+                        //                </div>
+                        //                <div className={cx("book-info")}>
+                        //                   <h4>{item.author}</h4>
+                        //                </div>
+                        //          </div>
+                        //    )
+                        // }else {
                            return (
-                                 <div className={cx("book","col-6 col-sm-4 col-lg-4")} key={index}>
-                                       <div className={cx("book-img")}>
-                                          <img src={item.image} alt={item.name} />
-                                       </div>
-                                       <div className={cx("book-info")}>
-                                          <h3>{item.name}</h3>
-                                       </div>
-                                       <div className={cx("book-info")}>
-                                          <h4>{item.author}</h4>
-                                       </div>
-                                 </div>
-                           )
-                        }else {
-                           return (
-                              <div className={cx("book","col-6 col-sm-2 col-lg-2")} key={index}>
+                              <div className={cx("book","col-6 col-sm-4 col-lg-2")} key={index}>
                                     <div className={cx("book-img")}>
                                        <img src={item.image} alt={item.name} />
                                     </div>
@@ -67,7 +67,7 @@ const Book = () => {
                                     </div>
                               </div>
                            )
-                        }
+                        // }
                      })
                   }
                </div>

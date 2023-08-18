@@ -12,13 +12,16 @@ import Food from '../food';
 import News from '../news';
 import GoldPrice from '../goldPrice';
 import DollarPrice from '../dollarPrice';
+import LuckNumber from '../luckyNumber';
+import LuckNumberRight from '../luckyNumberRight';
+import Travel from '../travel';
 
 const  cx = classnames.bind(styles);
 
 
 const Home = () => {
     const test = import.meta.env.VITE_SOME_KEY;
-    console.log('render la die')
+    // console.log('render la die')
     return (
         <div className={cx("content", "container-fluid")}>
             <h1 className={cx("title")}>Today is perfect</h1>
@@ -59,7 +62,7 @@ const Home = () => {
                 </div>
                 <div className={cx("col-12 col-sm-12 col-lg-12")}>
                     <div className={cx("item")}>
-                        <News />
+                        <Travel />
                     </div>
                 </div>
                 <div className={cx("col-12 col-sm-6 col-lg-6")}>
@@ -70,6 +73,16 @@ const Home = () => {
                 <div className={cx("col-12 col-sm-6 col-lg-6")}>
                     <div className={cx("item")}>
                         <DollarPrice />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-6 col-lg-6")}>
+                    <div className={cx("item")}>
+                        <LuckNumber />
+                    </div>
+                </div>
+                <div className={cx("col-12 col-sm-6 col-lg-6")}>
+                    <div className={cx("item")}>
+                        <LuckNumberRight />
                     </div>
                 </div>
             </div>
