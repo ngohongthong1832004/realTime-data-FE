@@ -2,6 +2,7 @@ import classnames from 'classnames/bind';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styles from './travel.module.scss';
+import Skeleton from '../skeleton';
 
 const  cx = classnames.bind(styles);
 
@@ -27,7 +28,7 @@ const Travel = () => {
             <p className={cx("title")}>Beautiful places</p>
             <div className={cx("row")}>
                 {
-                    travel?.data?.map((item, index) => {
+                travel?.data ? travel?.data?.map((item, index) => {
                         return (
                             <div className={cx("col-12 col-md-6 col-lg-3")} key={index}>
                                 <div className={cx("card my-2")}>
@@ -39,7 +40,16 @@ const Travel = () => {
                                 </div>
                             </div>
                         )
-                    })
+                    }) :
+                Array.from(Array(4).keys()).map((item, index) => {
+                    return (
+                        <div className={cx("col-12 col-md-6 col-lg-3")} key={index}>
+                            <Skeleton height='30rem'/>
+                            <Skeleton height='2rem'/>
+                            <Skeleton height='0.8rem' line={4}/>
+                        </div>
+                    )
+                })
                 }
             </div>
        </div>

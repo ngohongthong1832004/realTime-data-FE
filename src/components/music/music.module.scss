@@ -6,7 +6,7 @@
 }
 
 .music-wrap{
-    max-height: 42rem;
+    max-height: 46rem;
     overflow: auto;
 }
 
@@ -38,6 +38,7 @@
         border-radius: 0.5rem;
         overflow: hidden;
         object-fit: cover;
+
     }
 
     .music-info {
@@ -49,5 +50,18 @@
             font-size: 0.9rem;
             color: #888;
         }
+    }
+}
+
+
+@media (max-width : 987px ) {
+    .music-wrap{
+        max-height: 40rem;
+    }
+}
+
+@media (min-width : 987px ) and  (max-width : 1200px ) {
+    .music-wrap{
+        max-height: 100%;
     }
 }

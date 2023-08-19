@@ -2,6 +2,7 @@ import classnames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './book.module.scss';
+import Skeleton from '../skeleton';
 
 const  cx = classnames.bind(styles);
 
@@ -38,36 +39,34 @@ const Book = () => {
             <div className={cx("list-book")}>
                <div className={cx("row", "custom-row")}>
                   {
-                     data && data?.data[genre]?.data?.map((item, index) =>{
-                        // if (index == 2 ){
-                        //    return (
-                        //          <div className={cx("book","col-6 col-sm-4 col-lg-4")} key={index}>
-                        //                <div className={cx("book-img")}>
-                        //                   <img src={item.image} alt={item.name} />
-                        //                </div>
-                        //                <div className={cx("book-info")}>
-                        //                   <h3>{item.name}</h3>
-                        //                </div>
-                        //                <div className={cx("book-info")}>
-                        //                   <h4>{item.author}</h4>
-                        //                </div>
-                        //          </div>
-                        //    )
-                        // }else {
-                           return (
-                              <div className={cx("book","col-6 col-sm-4 col-lg-2")} key={index}>
-                                    <div className={cx("book-img")}>
-                                       <img src={item.image} alt={item.name} />
-                                    </div>
-                                    <div className={cx("book-info")}>
-                                       <h3>{item.name}</h3>
-                                    </div>
-                                    <div className={cx("book-info")}>
-                                          <h4>{item.author}</h4>
-                                    </div>
-                              </div>
-                           )
-                        // }
+                     data?.data[genre] ? data?.data[genre]?.data?.map((item, index) =>{
+                        return (
+                           <div className={cx("book","col-6 col-sm-4 col-lg-2")} key={index}>
+                                 <div className={cx("book-img")}>
+                                    <img src={item.image} alt={item.name} />
+                                 </div>
+                                 <div className={cx("book-info")}>
+                                    <h3>{item.name}</h3>
+                                 </div>
+                                 <div className={cx("book-info")}>
+                                       <h4>{item.author}</h4>
+                                 </div>
+                           </div>
+                        )
+                     }) : Array.from(Array(6).keys()).map((item, index) =>{
+                        return (
+                           <div className={cx("book","col-6 col-sm-4 col-lg-2")} key={index}>
+                                 <div className={cx("book-img")}>
+                                    <Skeleton height='12rem'/>
+                                 </div>
+                                 <div className={cx("book-info")}>
+                                    <Skeleton margin='0.5rem 0 0 0 '/>
+                                 </div>
+                                 <div className={cx("book-info")}>
+                                    <Skeleton margin='5px' height='0.6rem'/>
+                                 </div>
+                           </div>
+                        )
                      })
                   }
                </div>

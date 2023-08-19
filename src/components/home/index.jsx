@@ -9,12 +9,13 @@ import Film from '../film';
 import Music from '../music';
 import Book from '../book';
 import Food from '../food';
-import News from '../news';
+// import News from '../news';
 import GoldPrice from '../goldPrice';
 import DollarPrice from '../dollarPrice';
 import LuckNumber from '../luckyNumber';
 import LuckNumberRight from '../luckyNumberRight';
 import Travel from '../travel';
+import Skeleton from '../skeleton';
 
 const  cx = classnames.bind(styles);
 
@@ -73,7 +74,10 @@ const Home = () => {
                         <Travel />
                     </div>
                 </div>
-                <h1 className={cx("title")}>More ?</h1>
+
+
+
+                {/* <h2 className={cx("title")}>More ?</h2>
                 <div className={cx("col-12 col-sm-6 col-lg-6")}>
                     <div className={cx("item")}>
                         <GoldPrice />
@@ -88,12 +92,20 @@ const Home = () => {
                     <div className={cx("item")}>
                         <LuckNumber />
                     </div>
-                </div>
-                <div className={cx("col-12 col-sm-6 col-lg-6")}>
+                </div> */}
+
+
+                
+                {/* <div className={cx("col-12 col-sm-6 col-lg-6")}>
                     <div className={cx("item")}>
                         <LuckNumberRight />
                     </div>
-                </div>
+                </div> */}
+                {/* <div className={cx("col-12")}>
+                    <div className={cx("item")}>
+                        <Skeleton />                        
+                    </div>
+                </div> */}
             </div>
         </div>
     )
