@@ -20,7 +20,7 @@ const News = () => {
         })
     }, []);
 
-    console.log(news)
+    // console.log(news)
 
     return (
        <div className={cx("News-wrap")}>

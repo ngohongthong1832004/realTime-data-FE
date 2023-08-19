@@ -34,29 +34,29 @@ const Weather = () => {
                 <table className={"table table-dark"}>
                     <thead>
                         <tr>
-                            <th>{weather?.data?.more?.data[0][0]}</th>
-                            <th>{weather?.data?.more?.data[0][1]}</th>
-                            <th>{weather?.data?.more?.data[0][2]}</th>
-                            <th>{weather?.data?.more?.data[0][3]}</th>
-                            <th>{weather?.data?.more?.data[0][4]}</th>
+                            <th>{weather?.data?.more?.data[0]?.[0]}</th>
+                            <th>{weather?.data?.more?.data[0]?.[1]}</th>
+                            <th>{weather?.data?.more?.data[0]?.[2]}</th>
+                            <th>{weather?.data?.more?.data[0]?.[3]}</th>
+                            <th>{weather?.data?.more?.data[0]?.[4]}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th>
-                                <img src={weather?.data?.more?.data[1][0]}></img>
+                                <img src={weather?.data?.more?.data?.[1][0]}></img>
                             </th>
                             <th>
-                                <img src={weather?.data?.more?.data[1][1]}></img>
+                                <img src={weather?.data?.more?.data?.[1][1]}></img>
                             </th>
                             <th>
-                                <img src={weather?.data?.more?.data[1][2]}></img>
+                                <img src={weather?.data?.more?.data?.[1][2]}></img>
                             </th>
                             <th>
-                                <img src={weather?.data?.more?.data[1][3]}></img>
+                                <img src={weather?.data?.more?.data?.[1][3]}></img>
                             </th>
                             <th>
-                                <img src={weather?.data?.more?.data[1][4]}></img>
+                                <img src={weather?.data?.more?.data?.[1][4]}></img>
                             </th>
                         </tr>
                         <tr>

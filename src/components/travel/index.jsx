@@ -20,11 +20,11 @@ const Travel = () => {
         })
     }, []);
 
-    console.log(travel)
+    // console.log(travel)
 
     return (
        <div className={cx("travel-wrap")}>
-            <p className={cx("travel")}>What will i go ?</p>
+            <p className={cx("title")}>Beautiful places</p>
             <div className={cx("row")}>
                 {
                     travel?.data?.map((item, index) => {
